@@ -1,0 +1,31 @@
+@mixin font($ff: inherit, $fz: inherit, $fc: inherit, $fw: 300, $lh: 1) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    color: $fc;
+}
+
+@mixin posA($top: 50%, $left: 50%, $delta_x: -50%, $delta_y: -50%) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate($delta_x, $delta_y);
+}
+
+@mixin flex($align-items: center, $justify-content: center){
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin tr{
+    transition: all .4s ease-in;
+}
+@mixin hover() {
+    @include tr;
+    &:hover,
+    &:focus{
+        @content;
+    }
+}
