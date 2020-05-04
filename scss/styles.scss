@@ -191,11 +191,10 @@ h3{
         color: $body-color;
     }
     &__scroll{
-        @include posA($top: 90%, $left: 50%);
-        // bottom: 0;
+        @include posA($top: null, $left: 50%);
+        bottom: 0;
         fill: $body-color;
         margin-bottom: 1.5em;
-        // @include font($ff: $body-ff, $fz: 4rem, $fc: $black, $fw: 700, $lh:1.2);
         text-align: center;
         @include tr;
         &:hover{
